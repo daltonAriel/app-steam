@@ -1,0 +1,224 @@
+<div class="mt-4">
+  <div class="container">
+
+
+    <div
+      class="vh-100 min-vh-100 d-flex flex-column align-items-center justify-content-center"
+    >
+      <div class="row justify-content-center align-items-stretch">
+        <div class="col-12 col-sm-6 align-items-center">
+          <img
+            class="img-fluid animate__animated animate__backInDown"
+            src="assets/home_1.png"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div class="row justify-content-center align-items-stretch">
+        <div class="col-12 col-sm-6 fs-6 fs-md-1 jutify-text">
+          <p class="fs-5 animate__animated animate__backInDown animate__backInUp">
+            STEAM es una metodología educativa que combina ciencia, tecnología,
+            ingeniería, arte y matemáticas para fomentar la creatividad, el
+            pensamiento crítico y la resolución de problemas en los estudiantes.
+            Se enfoca en una educación interdisciplinaria y práctica que busca
+            preparar a los estudiantes para enfrentar los desafíos del mundo
+            real.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="row justify-content-center align-items-stretch">
+      <div class="col-12 col-sm-6 col-md-4">
+        <div data-aos="fade-right" class="card m-4 border border-info border-2">
+          <img
+            src="assets/home_2.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title text-center">Ciencia</h5>
+            <p class="card-text jutify-text">
+              La ciencia es un método sistemático y empírico de adquirir
+              conocimiento sobre el mundo natural a través de la observación, la
+              experimentación y el análisis crítico de la evidencia.
+            </p>
+            <div class="text-center">
+              <button type="button" class="btn btn-info" (click)="open(ciencia)">Ver</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div data-aos="fade-up" class="card m-4 border border-primary border-2">
+          <img
+            src="assets/home_3.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title text-center">Tecnologia</h5>
+            <p class="card-text jutify-text">
+              Conjunto de herramientas, técnicas y conocimientos utilizados para
+              crear soluciones prácticas a problemas concretos.
+            </p>
+            <div class="text-center">
+              <button type="button" class="btn btn-primary" (click)="open(tecno)">Ver</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div data-aos="fade-left" class="card m-4 border border-success border-2">
+          <img
+            src="assets/home_4.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title text-center">Ingeniería</h5>
+            <p class="card-text jutify-text">
+              Disciplina que se enfoca en aplicar conocimientos matemáticos,
+              científicos y tecnológicos para diseñar, construir y mantener
+              estructuras, dispositivos y sistemas que satisfagan necesidades
+              humanas.
+            </p>
+            <div class="text-center">
+              <button type="button" class="btn btn-success" (click)="open(inge)">Ver</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div data-aos="fade-right" class="card m-4 border border-danger border-2">
+          <img
+            src="assets/home_5.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title text-center">Arte</h5>
+            <p class="card-text jutify-text">
+              Expresión creativa y estética de la cultura humana a través de
+              diversas formas y medios, con el objetivo de transmitir emociones,
+              ideas y experiencias a través de la sensibilidad y la imaginación.
+            </p>
+            <div class="text-center">
+              <button type="button" class="btn btn-danger" (click)="open(arte)">Ver</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4">
+        <div data-aos="fade-left" class="card m-4 border border-warning border-2">
+          <img
+            src="assets/home_6.png"
+            class="card-img-top"
+            alt="..."
+          />
+          <div class="card-body">
+            <h5 class="card-title text-center">Matemáticas</h5>
+            <p class="card-text jutify-text">
+              Disciplina que estudia las propiedades de los números y formas
+              abstractas mediante el razonamiento lógico y deductivo, y se
+              aplica para resolver problemas en diferentes campos del
+              conocimiento.
+            </p>
+            <div class="text-center">
+              <button type="button" class="btn btn-warning" (click)="open(mate)">Ver</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<ng-template #ciencia let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Ciencia</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+
+  <div class="modal-body">
+    <app-ciencia></app-ciencia>
+  </div>
+</ng-template>
+
+<ng-template #tecno let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Tecnologia</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+
+  <div class="modal-body">
+    <app-tecno></app-tecno>
+  </div>
+</ng-template>
+
+<ng-template #inge let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Ingeniería</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+
+  <div class="modal-body">
+    <app-inge></app-inge>
+  </div>
+</ng-template>
+
+<ng-template #arte let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Arte</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+
+  <div class="modal-body">
+    <app-arte></app-arte>
+  </div>
+</ng-template>
+
+<ng-template #mate let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title">Matemáticas</h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+
+  <div class="modal-body">
+    <app-mate></app-mate>
+  </div>
+</ng-template>
